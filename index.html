@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="./sagassagazes/css/font-awesome-4.7.0/css/font-awesome.min.css">
+	<script src="./js/jquery.min.js"></script> 	
+	<script type="text/javascript">
+		$(function(){
+			function Produto(id, nome, quant, valUnitario){
+				return{ "id":id,
+						"nome":nome,
+						"quant":quant,
+						"valUnitario":valUnitario
+				}
+			}
+				var cardapio = [Produto(1,"Capuccino",1,7)
+										,Produto(2,"Espresso",1,4)
+										,Produto(3,"Fraputino",1,8)
+										,Produto(4,"Chocotino",1,7)
+										,Produto(5,"Chocolate Quente",1,8)
+										,Produto(6,"Frapé",1,10)
+										,Produto(7,"Suco de Laranja",1,12)
+										,Produto(8,"Açaí",1,12)];
+
+				$.each(cardapio, function(ind, item){
+					$("#cardapio").append($("<li />").text(item.nome));
+				});
+
+				$("#cardapio").on("click","li", function(){
+					var produtoEscolhido = $(this).text();
+					$("#pedidos").append($("<li />").text(produtoEscolhido))
+				});
+		});
+		
+
+
+
+	</script>
+</head>
+<body>
+	<h1>Lanchonete do Cefet</h1>
+	<ul id="cardapio">
+		
+
+	</ul>
+	<h2>Pedidos</h2>
+	<ul id="pedidos">
+		
+	</ul>
+</body>
+</html>

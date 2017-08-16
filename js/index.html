@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JQuery</title>
+		<script src="./jquery.min.js"></script>
+		<script> 
+			$(function(){
+				alert("Xabláu!");
+				$("#esconder").click(function(){
+					$(intro).slideUp(2000, function(){
+						alert("Xabláu!");
+				});
+			});
+				$("#mostrar").click(function(){
+					$("#intro").fadeIn("slow");
+				});
+				$("#alternar").click(function(){
+					$("#intro").fadeToggle("fast");		
+				});
+				$("#esconderAte").click(function(){
+
+				}
+
+		</script>
+	</head>
+	<body>
+		<p id="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vehicula orci vitae leo iaculis, rutrum ultrices velit iaculis. Vestibulum dignissim lorem ac neque bibendum maximus. Aenean at arcu consequat sapien ultrices lacinia in eu ipsum. Sed volutpat est sit amet bibendum condimentum. Nullam sed ornare enim, ac gravida nisl. Nulla varius porta purus nec viverra. Donec ut nisl ullamcorper, bibendum risus at, rhoncus orci. Cras id ante eget justo fermentum accumsan.</p>
+
+	</body>
+</html>
